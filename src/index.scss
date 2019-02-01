@@ -1,5 +1,6 @@
 body {
-  background-image: url('https://images.wallpaperscraft.com/image/anime_girl_tenderness_wind_ring_sadness_15014_1366x768.jpg')
+  background-image: url('https://images.wallpaperscraft.com/image/anime_girl_tenderness_wind_ring_sadness_15014_1366x768.jpg');
+  background-repeat: no-repeat;
 }
 
 #leftCol {
@@ -70,7 +71,7 @@ body {
 }
 
 .button-enabled:hover {
-    background-color: aqua;
+  background-color: aqua;
 }
 
 .button-disabled:hover {
