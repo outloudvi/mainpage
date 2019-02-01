@@ -1,0 +1,45 @@
+{
+  "name": "outv-im-homepage",
+  "version": "1.0.0",
+  "description": "Main page for outv.im",
+  "main": "src/index.ts",
+  "private": true,
+  "scripts": {
+    "build": "npx webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/outloudvi/mainpage.git"
+  },
+  "keywords": [
+    "typescript",
+    "webpack"
+  ],
+  "author": "Outvi V",
+  "license": "MIT",
+  "homepage": "https://outv.im/",
+  "devDependencies": {
+    "copy-webpack-plugin": "^4.6.0",
+    "css-loader": "^2.1.0",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "ts-loader": "^5.3.2",
+    "tslint": "^5.12.1",
+    "tslint-microsoft-contrib": "^6.0.0",
+    "typescript": "^3.2.2",
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "dependencies": {
+    "@types/jquery": "^3.3.29",
+    "@types/semantic-ui": "^2.2.6",
+    "jquery": "^3.3.1",
+    "redux": "^4.0.1"
+  },
+  "bugs": {
+    "url": "https://github.com/outloudvi/mainpage/issues"
+  }
+}

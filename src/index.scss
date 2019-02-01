@@ -1,0 +1,78 @@
+body {
+  background-image: url('https://images.wallpaperscraft.com/image/anime_girl_tenderness_wind_ring_sadness_15014_1366x768.jpg')
+}
+
+#leftCol {
+  float: left;
+}
+
+#rightCol {
+  float: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  div:first-child {
+    margin-top: 20px;
+  }
+}
+
+.blueones {
+  background-color: aquamarine;
+  font-family: 'Fira Code', monospace;
+}
+
+#luArea {
+  display: block;
+  opacity: 0.7;
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: 40px;
+  padding: 10px;
+  padding-right: 20px;
+  width: max-content;
+}
+
+.lTitle {
+  display: block;
+  padding: 10px;
+  margin: 10px 20px;
+  width: max-content;
+}
+
+.lItem {
+  display: block;
+  padding: 10px;
+  margin: 10px 20px;
+  width: max-content;
+  
+  a {
+    text-decoration: none;
+  }
+}
+
+#bottomPlayer {
+  position: fixed;
+  bottom: 20px;
+  width: 70%;
+  margin: 0 15%;
+  min-height: 10px;
+
+  @media screen and (max-width: 768px) {
+    width: 95%;
+    margin: 0 2.5%;
+  }
+}
+
+.button {
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.button-enabled:hover {
+    background-color: aqua;
+}
+
+.button-disabled:hover {
+  background-color: aquamarine !important;
+}
