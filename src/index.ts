@@ -48,6 +48,7 @@ export function updatePlayer(id: number): void {
         playerType = PLAYER.findIndex(x => x === thisPlayerType);
     }
     document.getElementById('bottomPlayer').innerHTML = EMBED[PLAYER[playerType]](music.embed[PLAYER[playerType]]);
+    document.getElementById('btnSwitch').innerText = `Switch source\n(current: ${PLAYER[playerType]})`;
 }
 
 export function nextSong(): void {
@@ -68,7 +69,8 @@ function checkNextsongStatus(id: number) {
         targetNumber = 0;
     }
     if (Object.keys(MUSIC[id].embed).length > 1) {
-        document.getElementById('btnSwitch').innerText = 'Switch source';
+        // Source already deemed at updatePlayer()
+        // document.getElementById('btnSwitch').innerText = 'Switch source';
         document.getElementById('btnSwitch').className = 'lItem blueones button button-enabled';
         document.getElementById('btnSwitch').removeAttribute('disabled');
     } else {
