@@ -50,6 +50,7 @@ export function updatePlayer(id: number): void {
         playerType = PLAYER.findIndex(x => x === thisPlayerType);
     }
     document.getElementById('bottomPlayer').innerHTML = EMBED[PLAYER[playerType]](music.embed[PLAYER[playerType]]);
+    document.getElementById('bottomPlayer').className = `player-${PLAYER[playerType]}`;
     document.getElementById('btnSwitch').innerText = `Switch source\n(current: ${PLAYER[playerType]})`;
 }
 
