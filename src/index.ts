@@ -58,10 +58,10 @@ export function nextSong(): void {
         currentId = 0;
     }
     updatePlayer(currentId);
-    checkNextsongStatus(currentId);
+    checkSourceStatus(currentId);
 }
 
-function checkNextsongStatus(id: number) {
+function checkSourceStatus(id: number) {
     let targetNumber: number;
     if (playerType < PLAYER.length - 1) {
         targetNumber = playerType + 1;
