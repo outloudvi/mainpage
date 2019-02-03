@@ -12,10 +12,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-
-  div:first-child {
-    margin-top: 20px;
-  }
+  padding-top: 10px;
 }
 
 .blueones {
@@ -80,6 +77,20 @@ body {
 
 #btnSwitch {
   text-align: right;
+}
+
+// Adaptive
+
+@media screen and (max-width: 720px) {
+  #divNowPlaying {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #rightCol, #bottomPlayer {
+    display: none;
+  }
 }
 
 // per-player css setting

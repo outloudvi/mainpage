@@ -52,6 +52,7 @@ export function updatePlayer(id: number): void {
     document.getElementById('bottomPlayer').innerHTML = EMBED[PLAYER[playerType]](music.embed[PLAYER[playerType]]);
     document.getElementById('bottomPlayer').className = `player-${PLAYER[playerType]}`;
     document.getElementById('btnSwitch').innerText = `Switch source\n(current: ${PLAYER[playerType]})`;
+    perPlayerHook();
 }
 
 export function nextSong(): void {
@@ -105,4 +106,14 @@ document.getElementById('btnSwitch').addEventListener('click', () => {
     }
     playerType = PLAYER.findIndex(x => x === availableList[id]);
     updatePlayer(currentId);
+});
+
+function perPlayerHook() {
+    if (PLAYER[playerType] === 'youtube') {
+        document.querySelector('iframe').height = String(document.querySelector('#bottomPlayer').clientWidth * 9 / 16);
+    }
+}
+
+document.addEventListener('resize', () => {
+    perPlayerHook();
 });
