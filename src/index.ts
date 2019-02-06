@@ -66,12 +66,6 @@ export function nextSong(): void {
 }
 
 function checkSourceStatus(id: number) {
-    let targetNumber: number;
-    if (playerType < PLAYER.length - 1) {
-        targetNumber = playerType + 1;
-    } else {
-        targetNumber = 0;
-    }
     if (Object.keys(MUSIC[id].embed).length > 1) {
         // Source already deemed at updatePlayer()
         // document.getElementById('btnSwitch').innerText = 'Switch source';
