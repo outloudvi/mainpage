@@ -39,7 +39,7 @@ let MUSIC: musicitem[] = [
 ];
 
 let playerType = 0;
-let currentId = 1;
+let currentId = 0;
 
 export function updatePlayer(id: number): void {
     let music = MUSIC[id];
@@ -92,26 +92,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 // tslint:disable-next-line: prefer-for-of
                 for (let i = 0; i < MUSIC.length; i++) {
                     if (MUSIC[i].id === number) {
-                        currentId = number;
+                        currentId = i;
                         if (match[3]) {
                             if (PLAYER.findIndex(x => x === match[3]) !== -1) {
                                 playerType = PLAYER.findIndex(x => x === match[3]);
                             }
                         }
-                        updatePlayer(currentId);
-                        checkSourceStatus(currentId);
-                        return;
                     }
                 }
             }
-            updatePlayer(currentId);
-            checkSourceStatus(currentId);
-            return;
         }
-        nextSong();
-    })().catch(err => {
         updatePlayer(currentId);
         checkSourceStatus(currentId);
+    })().catch(err => {
         throw err;
     });
 });
