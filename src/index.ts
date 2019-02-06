@@ -104,10 +104,16 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 }
             }
+            updatePlayer(currentId);
+            checkSourceStatus(currentId);
             return;
         }
         nextSong();
-    })().catch(err => { throw err; });
+    })().catch(err => {
+        updatePlayer(currentId);
+        checkSourceStatus(currentId);
+        throw err;
+    });
 });
 
 document.getElementById('btnNextsong').addEventListener('click', () => {
