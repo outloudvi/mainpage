@@ -21,6 +21,7 @@
     "no-relative-imports": false,
     "max-line-length": false,
     "no-inner-html": false,
-    "insecure-random": false
+    "insecure-random": false,
+    "newline-before-return": false
   }
 }
