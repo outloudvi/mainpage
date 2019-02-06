@@ -81,9 +81,33 @@ function checkSourceStatus(id: number) {
 document.addEventListener('DOMContentLoaded', () => {
     (async () => {
         MUSIC = await fetch(MUSIC_URL).then(async resp => resp.json());
+        console.log('Music list updated.');
+        console.info(`${MUSIC.length} songs.`);
+        console.info(`Sources: ${PLAYER.join(' ')}`);
+        if (window.location.hash) {
+            let hash = window.location.hash;
+            if (hash.match('#([0-9]*)(/(.*))?')) {
+                let match = hash.match('#([0-9]*)(/(.*))?');
+                let number = Number(match[1]);
+                // tslint:disable-next-line: prefer-for-of
+                for (let i = 0; i < MUSIC.length; i++) {
+                    if (MUSIC[i].id === number) {
+                        currentId = number;
+                        if (match[3]) {
+                            if (PLAYER.findIndex(x => x === match[3]) !== -1) {
+                                playerType = PLAYER.findIndex(x => x === match[3]);
+                            }
+                        }
+                        updatePlayer(currentId);
+                        checkSourceStatus(currentId);
+                        return;
+                    }
+                }
+            }
+            return;
+        }
+        nextSong();
     })().catch(err => { throw err; });
-    console.log('Music list updated.');
-    nextSong();
 });
 
 document.getElementById('btnNextsong').addEventListener('click', () => {
