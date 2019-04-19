@@ -18,7 +18,10 @@ body {
 
 .blueones {
   background-color: aquamarine;
-  font-family: 'Fira Code', monospace;
+}
+
+.greenones {
+  background-color: #92f3f2;
 }
 
 #luArea {
@@ -44,6 +47,7 @@ body {
   padding: 10px;
   margin: 10px 20px;
   width: max-content;
+  font-family: 'Fira Code', monospace;
   
   a {
     text-decoration: none;
