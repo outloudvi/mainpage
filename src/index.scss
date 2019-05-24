@@ -56,10 +56,14 @@ body {
 
 #bottomPlayer {
   position: fixed;
-  bottom: 20px;
+  bottom: 3vh;
   width: 70%;
   margin: 0 15%;
   min-height: 10px;
+  height: 92vh;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
 
   @media screen and (max-width: 768px) {
     width: 95%;
@@ -106,4 +110,8 @@ body {
   margin-top: 3vh;
   position: absolute;
   margin-left: 15vw;
+}
+
+.player-ncm {
+  text-align: center
 }
