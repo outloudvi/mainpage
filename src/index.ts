@@ -13,7 +13,7 @@ const MUSIC_URL = 'https://raw.githubusercontent.com/outloudvi/tellurmusic/maste
 
 export const EMBED = {
     soundcloud: (id) => `<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${id}&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>`,
-    ncm: (id) => `<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="https://music.163.com/outchain/player?type=2&id=${id}&auto=1&height=66"></iframe>`,
+    ncm: (id) => `<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="https://music.163.com/outchain/player?type=2&id=${id}&auto=0&height=66"></iframe>`,
     youtube: (id) => `<iframe src="https://www.youtube-nocookie.com/embed/${id}" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen width="100%" height="100%" frameborder="0"></iframe>`,
     bilibili: (id) => {
         let groups = String(id).split("?")
