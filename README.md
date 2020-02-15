@@ -1,5 +1,24 @@
-# outv.im Mainpage
+# mainpage
 
-[As you see](https://outv.im).
+## Project setup
+```
+yarn install
+```
 
-Image adapted from <https://wallpaperscraft.com/wallpaper/anime_girl_tenderness_wind_ring_sadness_15014>.
+### Compiles and hot-reloads for development
+```
+yarn serve
+```
+
+### Compiles and minifies for production
+```
+yarn build
+```
+
+### Lints and fixes files
+```
+yarn lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).

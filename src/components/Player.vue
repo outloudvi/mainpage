@@ -1,0 +1,203 @@
+<template>
+  <div>
+    <div class="control">
+      <div id="divNowPlaying">{{ displayTitle }}</div>
+      <div>
+        <span @click="nextSong">Next!</span>
+      </div>
+      <div :disabled="!canSwitchSource">
+        <span @click="nextSource" :class="{ disabledColor: !canSwitchSource }">
+          {{ canSwitchSource ? `Switch source` : "No other sources available" }}
+        </span>
+      </div>
+      <a
+        target="_blank"
+        href="https://github.com/outloudvi/tellurmusic/issues/new?assignees=outloudvi&labels=contributed%2C+type%3Adicsussion&template=playlist-recommendation.md&title="
+        >Recommend a song</a
+      >
+    </div>
+    <div class="player" :class="playerClassName" v-html="item"></div>
+  </div>
+</template>
+
+<script lang="ts">
+import Vue from "vue";
+import Component from "vue-class-component";
+
+interface Music {
+  id: number;
+  title: string;
+  author: string | string[];
+  links: { [key: string]: string };
+  embed: { [key: string]: number };
+}
+
+const PlayerFact = Vue.extend({
+  props: {
+    playlistUri: String
+  }
+});
+
+@Component
+export default class Player extends PlayerFact {
+  playlistUri!: string;
+  playlistItems: Music[] = [];
+  playerClassName = "";
+  currentPlayingId = 0;
+  currentPlayingSource = "";
+  item = "";
+  Players: { [key: string]: Function } = {
+    soundcloud(id: string) {
+      return `<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${id}&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>`;
+    },
+    ncm(id: string) {
+      return `<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="https://music.163.com/outchain/player?type=2&id=${id}&auto=0&height=66"></iframe>`;
+    },
+    youtube(id: string) {
+      return `<iframe src="https://www.youtube-nocookie.com/embed/${id}" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen width="100%" height="100%" frameborder="0"></iframe>`;
+    },
+    bilibili(id: string) {
+      const groups = String(id).split("?");
+      const page = groups.length > 1 ? `&page=${groups[1]}` : "";
+      return `<iframe width="100%" height="100%" allowfullscreen frameborder="0" src="https://player.bilibili.com/player.html?aid=${groups[0]}${page}"></iframe>`;
+    }
+  };
+
+  get PlayerList(): string[] {
+    return Object.keys(this.Players);
+  }
+
+  get nowPlaying(): Music | undefined {
+    return this.playlistItems[this.currentPlayingId];
+  }
+
+  get displayTitle(): string {
+    const music = this.nowPlaying;
+    if (music) {
+      return `${music.author} - ${music.title}`;
+    }
+    return "";
+  }
+
+  get canSwitchSource(): boolean {
+    if (this.nowPlaying) {
+      return Object.keys(this.nowPlaying.embed).length > 1;
+    }
+    return false;
+  }
+
+  mounted() {
+    // eslint-disable-next-line @typescript-eslint/no-this-alias
+    const _this = this;
+    fetch(this.playlistUri)
+      .then(x => x.json())
+      .then(data => {
+        _this.playlistItems = data;
+        console.log("Music list updated.");
+        console.info(`${_this.playlistItems.length} songs.`);
+        console.info(`Sources: ${_this.PlayerList}`);
+        _this.refreshPlayback(0);
+      });
+  }
+
+  // Prepare for resize
+  ready() {
+    window.addEventListener("resize", this.handleResize);
+  }
+
+  beforeDestroy() {
+    window.removeEventListener("resize", this.handleResize);
+  }
+
+  perPlayerHook() {
+    if (this.currentPlayingSource === "youtube") {
+      // document.querySelector("iframe").height = String(
+      //   (document.querySelector("#bottomPlayer").clientWidth * 9) / 16
+      // );
+    }
+  }
+
+  nextSong() {
+    this.refreshPlayback(
+      this.currentPlayingId < this.playlistItems.length - 1
+        ? this.currentPlayingId + 1
+        : 0
+    );
+  }
+
+  nextSource() {
+    if (this.nowPlaying) {
+      const sources = Object.keys(this.nowPlaying.embed);
+      const index = sources.indexOf(this.currentPlayingSource);
+      let nextSource;
+      if (index == -1 || index == sources.length - 1) {
+        nextSource = sources[0];
+      } else {
+        nextSource = sources[index + 1];
+      }
+      this.updatePlayback(this.currentPlayingId, nextSource);
+    }
+  }
+
+  handleResize() {
+    this.perPlayerHook();
+  }
+
+  refreshPlayback(id: number): void {
+    const music = this.playlistItems[id];
+    document.title = `${music.author} - ${music.title} | outv.im`;
+    if (this.currentPlayingSource in music.embed === false) {
+      this.currentPlayingSource = Object.keys(music.embed)[0];
+    }
+    this.updatePlayback(id, this.currentPlayingSource);
+  }
+
+  updatePlayback(musicid: number, embed: string) {
+    this.currentPlayingId = musicid;
+    this.currentPlayingSource = embed;
+    this.item = this.Players[embed]((this.nowPlaying as Music).embed[embed]);
+    this.playerClassName = `player-${this.currentPlayingSource}`;
+    this.perPlayerHook();
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped lang="scss">
+#divNowPlaying {
+  color: #ddd;
+  opacity: 0.5;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 3vh 3vw;
+  font-size: 3rem;
+}
+
+.control {
+  margin-top: 15vh !important;
+  margin-bottom: 3vh !important;
+  span {
+    cursor: pointer;
+  }
+}
+
+.disabledColor {
+  color: #777 !important;
+  margin-right: 0 !important;
+}
+
+.player {
+  margin: 0 !important;
+}
+
+// per-player css setting
+
+.player-youtube {
+  flex-grow: 1;
+}
+
+.player-ncm {
+  text-align: center;
+}
+</style>

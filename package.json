@@ -1,47 +1,34 @@
 {
   "name": "outv-im-homepage",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Main page for outv.im",
-  "main": "src/index.ts",
   "private": true,
   "scripts": {
-    "build": "npx webpack"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/outloudvi/mainpage.git"
-  },
-  "keywords": [
-    "typescript",
-    "webpack"
-  ],
-  "author": "Outvi V",
-  "license": "MIT",
-  "homepage": "https://outv.im/",
-  "devDependencies": {
-    "copy-webpack-plugin": "^4.6.0",
-    "css-loader": "^2.1.1",
-    "file-loader": "^3.0.1",
-    "html-webpack-plugin": "^3.2.0",
-    "node-sass": "^4.12.0",
-    "sass-loader": "^7.1.0",
-    "style-loader": "^0.23.1",
-    "ts-loader": "^5.4.5",
-    "tslint": "^5.16.0",
-    "tslint-microsoft-contrib": "^6.1.1",
-    "typescript": "^3.4.5",
-    "url-loader": "^1.1.2",
-    "webpack": "^4.30.0",
-    "webpack-cli": "^3.3.1",
-    "webpack-dev-server": "^3.3.1"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "@types/jquery": "^3.3.29",
-    "@types/semantic-ui": "^2.2.6",
-    "jquery": "^3.3.1",
-    "redux": "^4.0.1"
+    "core-js": "^3.6.4",
+    "vue": "^2.6.11"
   },
-  "bugs": {
-    "url": "https://github.com/outloudvi/mainpage/issues"
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.18.0",
+    "@typescript-eslint/parser": "^2.18.0",
+    "@vue/cli-plugin-babel": "^4.2.0",
+    "@vue/cli-plugin-eslint": "^4.2.0",
+    "@vue/cli-plugin-typescript": "^4.2.0",
+    "@vue/cli-service": "^4.2.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/eslint-config-typescript": "^5.0.1",
+    "eslint": "^6.7.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-vue": "^6.1.2",
+    "node-sass": "^4.12.0",
+    "prettier": "^1.19.1",
+    "sass-loader": "^8.0.2",
+    "typescript": "~3.7.5",
+    "vue-class-component": "^7.2.3",
+    "vue-template-compiler": "^2.6.11"
   }
 }
