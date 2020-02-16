@@ -16,7 +16,7 @@
       <div>
         <a @click="emitSwitch">About Outvi V</a>
       </div>
-      <small id="stub"
+      <small class="stub"
         >Music player only available on large screens (>768px).</small
       >
     </div>
@@ -45,12 +45,12 @@ export default class MainLeft extends Vue {
 </script>
 
 <style lang="scss" scoped>
-#stub {
+.stub {
   display: none;
 }
 
 @media screen and (max-width: 768px) {
-  #app {
+  #main {
     grid-template-columns: 1fr 10fr 1fr;
   }
   #left {
@@ -63,7 +63,7 @@ export default class MainLeft extends Vue {
   #right {
     display: none;
   }
-  #stub {
+  .stub {
     display: block;
     font-size: 1.1rem;
     text-align: center;
