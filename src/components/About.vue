@@ -93,6 +93,10 @@ export default class AboutLeft extends Vue {
 </script>
 
 <style lang="scss" scoped>
+.stub {
+  display: none;
+}
+
 #left {
   img {
     height: 100px;
