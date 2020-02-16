@@ -16,6 +16,9 @@
           >My GPG key</a
         >
       </div>
+      <small id="stub"
+        >Music player only available on large screens (>768px).</small
+      >
     </div>
     <Player
       id="right"
@@ -105,6 +108,32 @@ body {
     &:hover {
       color: #eee;
     }
+  }
+}
+
+#stub {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  #app {
+    grid-template-columns: 1fr 10fr 1fr;
+  }
+  #left {
+    justify-content: center;
+    align-items: center;
+    * {
+      margin: 2vh 0;
+    }
+  }
+  #right {
+    display: none;
+  }
+  #stub {
+    display: block;
+    font-size: 1.1rem;
+    text-align: center;
+    color: #666;
   }
 }
 </style>

@@ -172,6 +172,7 @@ export default class Player extends PlayerFact {
   top: 0;
   margin: 3vh 3vw;
   font-size: 3rem;
+  z-index: -1;
 }
 
 .control {
