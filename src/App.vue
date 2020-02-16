@@ -1,25 +1,5 @@
 <template>
-  <div id="app">
-    <div id="left">
-      <h1>outv.im</h1>
-      <div>
-        <a target="_blank" href="https://about.outv.im">About Outvi V</a>
-      </div>
-      <div>
-        <a target="_blank" href="https://blog.outv.im">Re:Linked blog</a>
-      </div>
-      <div>
-        <a target="_blank" href="https://bin.outv.im">Private[dot]Bin</a>
-      </div>
-      <div>
-        <a target="_blank" href="https://www.outv.im/askme/pubkey.gpg"
-          >My GPG key</a
-        >
-      </div>
-      <small id="stub"
-        >Music player only available on large screens (>768px).</small
-      >
-    </div>
+    <router-view id="left" @switch-left="switchLeft"></router-view>
     <Player
       id="right"
       playlistUri="https://raw.githubusercontent.com/outloudvi/tellurmusic/master/music.json"
@@ -35,6 +15,21 @@ export default Vue.extend({
   name: "App",
   components: {
     Player
+  },
+  data() {
+    return {
+      switched: "/"
+    };
+  },
+  methods: {
+    switchLeft() {
+      if (this.switched === "/") {
+        this.switched = "/about";
+      } else if (this.switched === "/about") {
+        this.switched = "/";
+      }
+      this.$router.push(this.switched);
+  }
   }
 });
 </script>
