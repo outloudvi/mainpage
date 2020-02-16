@@ -9,7 +9,7 @@
         <a target="_blank" href="https://bin.outv.im">Private[dot]Bin</a>
       </div>
       <div>
-        <a target="_blank" href="https://www.outv.im/askme/pubkey.gpg"
+        <a target="_blank" href="https://outloudvi.github.io/askme/pubkey.gpg"
           >My GPG key</a
         >
       </div>
