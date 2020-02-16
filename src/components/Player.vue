@@ -100,23 +100,6 @@ export default class Player extends PlayerFact {
       });
   }
 
-  // Prepare for resize
-  ready() {
-    window.addEventListener("resize", this.handleResize);
-  }
-
-  beforeDestroy() {
-    window.removeEventListener("resize", this.handleResize);
-  }
-
-  perPlayerHook() {
-    if (this.currentPlayingSource === "youtube") {
-      // document.querySelector("iframe").height = String(
-      //   (document.querySelector("#bottomPlayer").clientWidth * 9) / 16
-      // );
-    }
-  }
-
   nextSong() {
     this.refreshPlayback(
       this.currentPlayingId < this.playlistItems.length - 1
@@ -139,10 +122,6 @@ export default class Player extends PlayerFact {
     }
   }
 
-  handleResize() {
-    this.perPlayerHook();
-  }
-
   refreshPlayback(id: number): void {
     const music = this.playlistItems[id];
     document.title = `${music.author} - ${music.title} | outv.im`;
@@ -157,7 +136,6 @@ export default class Player extends PlayerFact {
     this.currentPlayingSource = embed;
     this.item = this.Players[embed]((this.nowPlaying as Music).embed[embed]);
     this.playerClassName = `player-${this.currentPlayingSource}`;
-    this.perPlayerHook();
   }
 }
 </script>
