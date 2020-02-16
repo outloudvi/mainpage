@@ -13,8 +13,10 @@
       <div>
         <a id="btnBack" @click="emitSwitch">Back to main page</a>
       </div>
+      <div class="stub">(slide down...)</div>
     </div>
     <div id="right">
+      <div class="stub">(slide up...)</div>
       <div class="list">
         <SNSItem
           v-for="(item, key) in sns"
@@ -141,5 +143,25 @@ export default class AboutLeft extends Vue {
 
 #btnBack:hover {
   margin-left: -8px;
+}
+
+@media screen and (max-width: 768px) {
+  #main {
+    grid-template-columns: 1fr 10fr 1fr;
+  }
+  #left,
+  #right {
+    grid-column: 2;
+    height: 100vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .stub {
+    display: block;
+    font-size: 1.1rem;
+    text-align: center;
+    color: #666;
+  }
 }
 </style>
