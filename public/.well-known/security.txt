@@ -1,0 +1,25 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Contact: mailto:security@outv.im
+Encryption: https://outv.im/askme/pubkey.gpg
+Acknowledgments: https://blog.outv.im/about/
+Preferred-Languages: en, zh-CN
+Canonical: https://outv.im/.well-known/security.txt
+
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCgAdFiEEhxTaBJV840FY/6l8SMhOJbE4XQoFAl3xqPEACgkQSMhOJbE4
+XQoQChAAhNqXQymaGdoUCKRPDFPCbkjszudYShZu3rYrzTU3cQh4Yn/orKRsW9RE
+gE/q4G+u5wiGsPPpygzi94fnTl+MmT8dg9ZxfGKzKwslP4dVwa/pGIB1uQV70MGB
+mldbbgg3ZRIC2CJixCmqPNOPjj4A4QgOVRiJNFrzzqNyJ2QBt1ciULSBef0W93tH
+b3M3Cp/gx0Xon9pdCc6Qa1ZUUEuXX5kUG3hfk4GTdZgOiiLWUK9jdEXdNeq+FwRD
+rFL2mC00wjuJn7d+YxdnLY/pzaHbWLbJrR747/py/76v13lV9BUuKRvLUgm+xFwQ
+uby+WjO0uynTwKNus/cDUpJGVXB5YgRxRJveK+XTRKW7FLJKVw/Nyuki44C6cVRW
+j0pAViK6oJXvAGPPAwf+j/1PwzwBZDBof91rOQYwV7Npwf7JsWse/cY02wM7eR8k
+6Jf5MzfEpAgt+xSmUrNuG0r/iYjk2Rsn5wSRHZrY+XM0jBaWNa46LFzBUa/NSoyy
+IxArTTYPjMzqriv/ojNB+Nfa23Xl+OcUR5HFqFkIXjfAA9KP5r/xzMR/xN2ny1t0
+RM01Nq/xQ+b8xsKaVj5dB7cGXdGD7VGELQiVmYL7AdPGw4Pu5TeUOEEXpCLm7SoC
+eNHkIaKD6XJAueTvw3sR+De8aWPJ42vC3gBvUJ0xPHbJC6cYfa8=
+=Q1RD
+-----END PGP SIGNATURE-----

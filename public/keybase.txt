@@ -1,0 +1,54 @@
+==================================================================
+https://keybase.io/outloudvi
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://outloudvi.github.io
+  * I am outloudvi (https://keybase.io/outloudvi) on keybase.
+  * I have a public key ASBmvi9cbctR3PUV0mruToQrcaLwY2d8MUpp8ljDv7YavQo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101aab232fd875d5ffe13ecf6b64d1d6569ad1e3fb4a021848077aa146929fffebc0a",
+            "host": "keybase.io",
+            "kid": "012066be2f5c6dcb51dcf515d26aee4e842b71a2f063677c314a69f258c3bfb61abd0a",
+            "uid": "9c3b3b9e66f3e5f00cddbadff2429c19",
+            "username": "outloudvi"
+        },
+        "service": {
+            "hostname": "outloudvi.github.io",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.23"
+    },
+    "ctime": 1496063440,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1496063359,
+        "hash": "79b517509ba67b2768f3e52c2208f08ee7f2aed6f04fd895615d7b036836e21de9633fd9eebbe96efe1fa0593700d131cbce1a1b6a40684c5def87d6f1d3d929",
+        "seqno": 1125755
+    },
+    "prev": "41a45fb34d37c538340e350915488f215ea8d2099fe023375413fe0415e4c174",
+    "seqno": 10,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgZr4vXG3LUdz1FdJq7k6EK3Gi8GNnfDFKafJYw7+2Gr0Kp3BheWxvYWTFAv57ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTAxYWFiMjMyZmQ4NzVkNWZmZTEzZWNmNmI2NGQxZDY1NjlhZDFlM2ZiNGEwMjE4NDgwNzdhYTE0NjkyOWZmZmViYzBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwNjZiZTJmNWM2ZGNiNTFkY2Y1MTVkMjZhZWU0ZTg0MmI3MWEyZjA2MzY3N2MzMTRhNjlmMjU4YzNiZmI2MWFiZDBhIiwidWlkIjoiOWMzYjNiOWU2NmYzZTVmMDBjZGRiYWRmZjI0MjljMTkiLCJ1c2VybmFtZSI6Im91dGxvdWR2aSJ9LCJzZXJ2aWNlIjp7Imhvc3RuYW1lIjoib3V0bG91ZHZpLmdpdGh1Yi5pbyIsInByb3RvY29sIjoiaHR0cHM6In0sInR5cGUiOiJ3ZWJfc2VydmljZV9iaW5kaW5nIiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMS4wLjIzIn0sImN0aW1lIjoxNDk2MDYzNDQwLCJleHBpcmVfaW4iOjUwNDU3NjAwMCwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE0OTYwNjMzNTksImhhc2giOiI3OWI1MTc1MDliYTY3YjI3NjhmM2U1MmMyMjA4ZjA4ZWU3ZjJhZWQ2ZjA0ZmQ4OTU2MTVkN2IwMzY4MzZlMjFkZTk2MzNmZDllZWJiZTk2ZWZlMWZhMDU5MzcwMGQxMzFjYmNlMWExYjZhNDA2ODRjNWRlZjg3ZDZmMWQzZDkyOSIsInNlcW5vIjoxMTI1NzU1fSwicHJldiI6IjQxYTQ1ZmIzNGQzN2M1MzgzNDBlMzUwOTE1NDg4ZjIxNWVhOGQyMDk5ZmUwMjMzNzU0MTNmZTA0MTVlNGMxNzQiLCJzZXFubyI6MTAsInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RA0XKhopwPDrXkHhY1AmY21R2yEBXQSk0CnMZbC5ETKnt188/QEGZFUtblgPQ+S7SrozlO0rwhE8sw2RkgoiWoAqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIHJcP5FfTvrTzU0yD7Qi1kcJcA3dCduQQaBKundtJGeio3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/outloudvi
+
+==================================================================
