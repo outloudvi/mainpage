@@ -142,6 +142,8 @@ export default class Player extends PlayerFact {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+@import "@/styles/menu.scss";
+
 #divNowPlaying {
   color: #ddd;
   opacity: 0.5;

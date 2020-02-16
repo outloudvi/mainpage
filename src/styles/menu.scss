@@ -1,0 +1,9 @@
+a,
+span {
+  text-decoration: none;
+  color: #bbb;
+  font-size: 2rem;
+  &:hover {
+    color: #eee;
+  }
+}

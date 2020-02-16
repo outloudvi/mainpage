@@ -1,0 +1,47 @@
+#main {
+  display: grid;
+  grid-template-columns: 1fr 4fr 6fr 1fr;
+  grid-column-gap: 3vw;
+  height: 100vh;
+}
+
+#left {
+  grid-column: 2;
+  justify-content: flex-end;
+
+  @import "./menu.scss";
+
+  a {
+    transition: margin-left ease 0.3s;
+    &:hover {
+      margin-left: 8px;
+    }
+  }
+}
+
+#right {
+  grid-column: 3;
+  text-align: right;
+
+  justify-content: space-between;
+}
+
+#left,
+#right {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5vh;
+
+  div {
+    margin: 1vh 0;
+  }
+
+  h1 {
+    font-size: 3.4rem;
+    margin-bottom: 1.4vh;
+  }
+}
+
+a {
+  cursor: pointer;
+}
