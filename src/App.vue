@@ -1,9 +1,14 @@
 <template>
+  <div id="app" v-if="ready">
     <router-view id="left" @switch-left="switchLeft"></router-view>
     <Player
       id="right"
       playlistUri="https://raw.githubusercontent.com/outloudvi/tellurmusic/master/music.json"
     ></Player>
+  </div>
+  <div id="preMounted" v-else>
+    <h1>Loading</h1>
+    <div>Hold tight!</div>
   </div>
 </template>
 
@@ -18,6 +23,7 @@ export default Vue.extend({
   },
   data() {
     return {
+      ready: false,
       switched: "/"
     };
   },
@@ -29,13 +35,32 @@ export default Vue.extend({
         this.switched = "/";
       }
       this.$router.push(this.switched);
-  }
+    }
+  },
+  mounted() {
+    this.ready = true;
   }
 });
 </script>
 
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+#preMounted {
+  font-size: 140%;
+  h1 {
+    text-transform: uppercase;
+    letter-spacing: 14px;
+  }
+  div:nth-child(2) {
+    color: #999;
+  }
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
 body {
   font-family: "Lato", "等线", sans-serif;
