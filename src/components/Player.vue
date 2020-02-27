@@ -158,9 +158,6 @@ export default class Player extends PlayerFact {
 .control {
   margin-top: 15vh !important;
   margin-bottom: 3vh !important;
-  span {
-    cursor: pointer;
-  }
 }
 
 .disabledColor {
