@@ -22,6 +22,7 @@
     </div>
     <Player
       id="right"
+      :bus="bus"
       playlistUri="https://raw.githubusercontent.com/outloudvi/tellurmusic/master/music.json"
     ></Player>
   </div>
@@ -38,7 +39,10 @@ import Player from "@/components/Player.vue";
   }
 })
 export default class MainLeft extends Vue {
+  bus = new Vue();
+
   emitSwitch() {
+    this.bus.$emit("cleanup");
     this.$emit("switch-left");
   }
 }

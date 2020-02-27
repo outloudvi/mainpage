@@ -1,6 +1,6 @@
 {
   "name": "outv-im-homepage",
-  "version": "2.2.1",
+  "version": "2.3.1",
   "description": "Main page for outv.im",
   "private": true,
   "scripts": {
@@ -15,6 +15,7 @@
     "@fortawesome/vue-fontawesome": "^0.1.9",
     "core-js": "^3.6.4",
     "vue": "^2.6.11",
+    "vue-property-decorator": "^8.4.0",
     "vue-router": "^3.1.5"
   },
   "devDependencies": {

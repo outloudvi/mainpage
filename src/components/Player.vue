@@ -5,41 +5,43 @@
       <div>
         <span @click="nextSong">Next!</span>
       </div>
-      <div :disabled="!canSwitchSource">
-        <span @click="nextSource" :class="{ disabledColor: !canSwitchSource }">
-          {{ canSwitchSource ? `Switch source` : "No other sources available" }}
-        </span>
-      </div>
       <a
         target="_blank"
         href="https://github.com/outloudvi/tellurmusic/issues/new?assignees=outloudvi&labels=contributed%2C+type%3Adicsussion&template=playlist-recommendation.md&title="
         >Recommend a song</a
       >
     </div>
-    <div class="player" :class="playerClassName" v-html="item"></div>
+    <AudioWave :bus="bus" :audioUri="audioUri"></AudioWave>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
 import Component from "vue-class-component";
+import AudioWave from "@/components/AudioWave.vue";
 
 interface Music {
   id: number;
   title: string;
   author: string | string[];
   links: { [key: string]: string };
-  embed: { [key: string]: number };
+  embed: { [key: string]: string };
 }
 
 const PlayerFact = Vue.extend({
   props: {
-    playlistUri: String
+    playlistUri: String,
+    bus: Vue
   }
 });
 
-@Component
+@Component({
+  components: {
+    AudioWave
+  }
+})
 export default class Player extends PlayerFact {
+  audioUri = "/1.m4a";
   playlistUri!: string;
   playlistItems: Music[] = [];
   playerClassName = "";
@@ -92,7 +94,9 @@ export default class Player extends PlayerFact {
     fetch(this.playlistUri)
       .then(x => x.json())
       .then(data => {
-        _this.playlistItems = data;
+        _this.playlistItems = data.filter(function (x: Music) {
+          return x.embed.uri;
+        });
         console.log("Music list updated.");
         console.info(`${_this.playlistItems.length} songs.`);
         console.info(`Sources: ${_this.PlayerList}`);
@@ -134,7 +138,7 @@ export default class Player extends PlayerFact {
   updatePlayback(musicid: number, embed: string) {
     this.currentPlayingId = musicid;
     this.currentPlayingSource = embed;
-    this.item = this.Players[embed]((this.nowPlaying as Music).embed[embed]);
+    this.audioUri = (this.nowPlaying as Music).embed["uri"];
     this.playerClassName = `player-${this.currentPlayingSource}`;
   }
 }
