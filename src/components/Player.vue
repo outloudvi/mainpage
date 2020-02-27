@@ -160,11 +160,6 @@ export default class Player extends PlayerFact {
   margin-bottom: 3vh !important;
 }
 
-.disabledColor {
-  color: #777 !important;
-  margin-right: 0 !important;
-}
-
 .player {
   margin: 0 !important;
 }

@@ -7,4 +7,10 @@ span {
   &:hover {
     color: #eee;
   }
+
+  &.disabledColor {
+    color: #777 !important;
+    margin-right: 0 !important;
+    cursor: default !important;
+  }
 }
