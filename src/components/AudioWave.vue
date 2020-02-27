@@ -18,7 +18,7 @@ https://github.com/Pizzacus/satania.moe/blob/33b4b2c5cceaf0c6a95b8abca5872560cb5
     <div>
       <div>
         <span id="currTime">{{ currTime }}</span>
-        <span id="totalTime"> / {{ totalTime }}</span>
+        <span id="totalTime" class="disabledColor"> / {{ totalTime }}</span>
       </div>
       <div id="progressBar" :style="{ width: String(perc * 100) + 'vw' }"></div>
     </div>
@@ -223,7 +223,10 @@ export default class AudioWave extends AudioFact {
   pointer-events: none;
 }
 
-#currTime {
+#currTime:hover,
+#totalTime:hover {
+  color: #bbb;
+  cursor: default;
 }
 
 #totalTime {
