@@ -89,6 +89,7 @@ export default class AudioWave extends AudioFact {
   refresh() {
     this.cleanup();
     this.audio = new Audio(this.audioUri);
+    this.audio.crossOrigin = "anonymous";
     this.waveAlreadyLinked = false;
   }
 
