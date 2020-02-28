@@ -28,6 +28,14 @@ https://github.com/Pizzacus/satania.moe/blob/33b4b2c5cceaf0c6a95b8abca5872560cb5
     </div>
     <div class="control">
       <div>
+        <span :class="{ disabledColor: !isPlaying }" @click="jumpSong(-5)">
+          --
+        </span>
+        <span :class="{ disabledColor: !isPlaying }" @click="jumpSong(5)">
+          ++
+        </span>
+      </div>
+      <div>
         <span :class="{ disabledColor: isPlaying }" @click="playSong"
           >Play</span
         >
@@ -158,6 +166,19 @@ export default class AudioWave extends AudioFact {
       _this.progressBarTransition = false;
     }, 1300);
   }
+
+  jumpSong(offset: number) {
+    let target = this.audio.currentTime + offset;
+    if (target > this.audio.duration) {
+      this.audio.currentTime = this.audio.duration;
+      this.stopSong();
+      return;
+    } else if (target < 0) {
+      this.audio.currentTime = 0;
+    }
+    this.audio.currentTime = target;
+  }
+
   waveStart() {
     const stream = this.audio.captureStream ?
       this.audio.captureStream() :
