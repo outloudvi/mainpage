@@ -20,7 +20,11 @@ https://github.com/Pizzacus/satania.moe/blob/33b4b2c5cceaf0c6a95b8abca5872560cb5
         <span id="currTime">{{ currTime }}</span>
         <span id="totalTime" class="disabledColor"> / {{ totalTime }}</span>
       </div>
-      <div id="progressBar" :style="{ width: String(perc * 100) + 'vw' }"></div>
+      <div
+        id="progressBar"
+        :class="{ inTransition: progressBarTransition }"
+        :style="{ width: String(perc * 100) + 'vw' }"
+      ></div>
     </div>
     <div class="control">
       <div>
@@ -80,6 +84,7 @@ export default class AudioWave extends AudioFact {
   isPlaying = false;
   ctx: any = "";
   musicPlayerContainer = this.$refs.container;
+  progressBarTransition = false;
   bufferLength = 0;
   dataArray = new Uint8Array();
   analyser: any = "";
@@ -142,9 +147,17 @@ export default class AudioWave extends AudioFact {
 
   stopSong() {
     this.pauseSong();
+    this.transitionHandler();
     this.audio.currentTime = 0;
   }
 
+  transitionHandler() {
+    let _this = this;
+    this.progressBarTransition = true;
+    setTimeout(() => {
+      _this.progressBarTransition = false;
+    }, 1300);
+  }
   waveStart() {
     const stream = this.audio.captureStream ?
       this.audio.captureStream() :
@@ -240,5 +253,9 @@ export default class AudioWave extends AudioFact {
   bottom: 0;
   height: 5px;
   background-color: #ccc;
+}
+
+.inTransition {
+  transition: width ease-in 1s;
 }
 </style>
