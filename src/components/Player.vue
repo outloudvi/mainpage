@@ -41,7 +41,7 @@ const PlayerFact = Vue.extend({
   }
 })
 export default class Player extends PlayerFact {
-  audioUri = "/1.m4a";
+  audioUri = "";
   playlistUri!: string;
   playlistItems: Music[] = [];
   playerClassName = "";
@@ -137,6 +137,7 @@ export default class Player extends PlayerFact {
 
   updatePlayback(musicid: number, embed: string) {
     this.currentPlayingId = musicid;
+    console.log(this.currentPlayingId)
     this.currentPlayingSource = embed;
     this.audioUri = (this.nowPlaying as Music).embed["uri"];
     this.playerClassName = `player-${this.currentPlayingSource}`;
