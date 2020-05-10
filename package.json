@@ -1,6 +1,6 @@
 {
   "name": "outv-im-homepage",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "description": "Main page for outv.im",
   "private": true,
   "scripts": {

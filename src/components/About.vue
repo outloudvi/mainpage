@@ -73,9 +73,9 @@ export default class AboutLeft extends Vue {
     },
     {
       icon: ["fas", "key"],
-      text: "0xE14A40B70A930B8B",
+      text: "0xA725CB57CA65CAFE",
       url:
-        "https://pgp.key-server.io/pks/lookup?op=vindex&fingerprint=on&search=0xE14A40B70A930B8B"
+        "https://keys.openpgp.org/search?q=7A9543829E475D7D3826B08DA725CB57CA65CAFE"
     },
     {
       icon: ["fas", "envelope"],
