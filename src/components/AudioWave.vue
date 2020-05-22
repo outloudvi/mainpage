@@ -28,25 +28,39 @@ https://github.com/Pizzacus/satania.moe/blob/33b4b2c5cceaf0c6a95b8abca5872560cb5
     </div>
     <div class="control">
       <div>
-        <span :class="{ disabledColor: !isPlaying }" @click="jumpSong(-5)">
+        <span
+          :class="{ disabledColor: !isPlaying }"
+          @click="jumpSong(-5)"
+          tabindex="0"
+        >
           --
         </span>
-        <span :class="{ disabledColor: !isPlaying }" @click="jumpSong(5)">
+        <span
+          :class="{ disabledColor: !isPlaying }"
+          @click="jumpSong(5)"
+          tabindex="0"
+        >
           ++
         </span>
       </div>
       <div>
-        <span :class="{ disabledColor: isPlaying }" @click="playSong"
+        <span
+          :class="{ disabledColor: isPlaying }"
+          @click="playSong"
+          tabindex="0"
           >Play</span
         >
       </div>
       <div>
-        <span :class="{ disabledColor: !isPlaying }" @click="pauseSong"
+        <span
+          :class="{ disabledColor: !isPlaying }"
+          @click="pauseSong"
+          tabindex="0"
           >Pause</span
         >
       </div>
       <div>
-        <span @click="stopSong">Stop</span>
+        <span @click="stopSong" tabindex="0">Stop</span>
       </div>
     </div>
   </div>

@@ -3,7 +3,7 @@
     <div class="control">
       <div id="divNowPlaying">{{ displayTitle }}</div>
       <div>
-        <span @click="nextSong">Next!</span>
+        <span @click="nextSong" tabindex="0">Next!</span>
       </div>
       <a
         target="_blank"

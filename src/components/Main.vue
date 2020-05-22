@@ -14,7 +14,7 @@
         >
       </div>
       <div>
-        <a @click="emitSwitch">About Outvi V</a>
+        <a @click="emitSwitch" tabindex="0">About Outvi V</a>
       </div>
       <small class="stub"
         >Music player only available on large screens (>768px).</small

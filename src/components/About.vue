@@ -11,7 +11,7 @@
         <a target="_blank" href="https://blog.outv.im">Blog</a>
       </div>
       <div>
-        <a id="btnBack" @click="emitSwitch">Back to main page</a>
+        <a id="btnBack" @click="emitSwitch" tabindex="0">Back to main page</a>
       </div>
       <div class="stub">(slide down...)</div>
     </div>
