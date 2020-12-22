@@ -58,13 +58,8 @@ export default class AboutLeft extends Vue {
     },
     {
       icon: ["fab", "mastodon"],
-      text: "@outvi@moe.cat",
-      url: "https://moe.cat/@outvi"
-    },
-    {
-      icon: ["fab", "keybase"],
-      text: "@outloudvi",
-      url: "https://keybase.io/outloudvi"
+      text: "@ov@social.outv.im",
+      url: "https://social.outv.im/ov"
     },
     {
       icon: ["fab", "twitter"],
