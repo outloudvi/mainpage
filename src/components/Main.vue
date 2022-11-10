@@ -31,7 +31,7 @@
 <script lang="ts">
 import Vue from "vue";
 import Component from "vue-class-component";
-import Player from "@/components/Player.vue";
+import Player from "@/components/PlayerView.vue";
 
 @Component({
   components: {
