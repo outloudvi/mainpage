@@ -1,24 +1,24 @@
 -----BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA512
+Hash: SHA256
 
 Contact: mailto:security@outv.im
 Encryption: https://outloudvi.github.io/askme/pubkey.gpg
-Acknowledgments: https://blog.outv.im/about/
-Preferred-Languages: en, zh-CN
+Acknowledgments: https://blog.outv.im/p/about/
+Preferred-Languages: en, zh-Hans
 Canonical: https://outv.im/.well-known/security.txt
 -----BEGIN PGP SIGNATURE-----
 
-iQIzBAEBCgAdFiEEKMPlAfAJRhjEZCdo/2IlXBCH8hwFAl7FMbgACgkQ/2IlXBCH
-8hxHxQ//Qn8xMPJmc/UHcK0s+4PKR7ZGnsOj+DI46U+jNYt0d0xWsND1sGED47UC
-fk23dP6Q1D89ujLKKQMasK42aKBTj5UdZuqt8+FRms13u0PDvXXRWFOxfgkfQFp0
-kyZhsTqAebycnIylJJMwWdyc9kxiD5ckF2PMi6kmoMd8QINpJ26q550BrOBPFa+C
-1vbaJZOnvmMPeh9haxvZV1DEnHE0LQn048yMTCc9denXBa98DZW8LD0f6lZXdaut
-OqEvVELIY2xayB0yH0fJ2wKbMZMOHyu+sqItJs63Xench1EokRD83kOpT0b0+dAg
-XmvaNkiaY8Vlf2HCZxekdMXUMA0S7YWhOjEY/ANNLgDZsvVoHsCYMKo94qrKa4Ms
-WiLRcbxOAJEYIfNL8Jfrn1WEwKWvl2XW4WK6CW4/qE1EXoBgGQOvdk19w9OqQOXL
-KE1QqywN768oe4GTRhQa/YlGf0ffYQh8TMTxwL+3Y05Fws54zO6SV+K9gsrIiKes
-7M9+vfCUEfxgVfAiNwLzGa+BT63m4CAgNKt0QdE5S7mDfuXnUIxpKv2PBTMVne6b
-NgJISeid7A4uDlUGT15YaUv4Dmnv1YhqHn4pl+qChl4Dgr7RQxg8IArwtuAsjb54
-hz4H6IxURzJfphIB3Ni1rg2oF+50ewHBvQL9zruahezDuYezPg4=
-=6lkA
+iQIzBAEBCAAdFiEEepVDgp5HXX04JrCNpyXLV8plyv4FAmaxeagACgkQpyXLV8pl
+yv6ETw//b8E+5uNosx4NdTwKtaAWoAoGA3zNSSMCz8FOHB9m45E6nOam9D/MHfMW
+uNhoazhPJlLKbVIRUPc13UhWRgYH/9DeJwl5ABKMsPbayjpjd5NvKz3zhwOzZMDj
+vJ3y88wxYYzPVMN4+xW0mup9ur4/1d9+lCzXWOBpIPvO9jMjKIgLMk27B0mmqUt6
+rbengydv998ZpkWaljhloDg8ZdP4L5l2nBoZ/ZI+VKsFFSF5jZmVAN0aKkJr3VBY
+MxGeXhUSTbjJreoL9cfTUHWZa4f2e1eiooSbHo7Y8JLW1meNp8Ygi4FpKBYkvECx
+FMXRdRvtXYjCkJGRWaWCnP1YrzGiAFXus1S/FxZ8Tf6dBbambM+9ALLeihP9KWly
+2QF32CHOHZxLE26ys16oQDueCeCXQMRU7Cp8Bye46tqwfTrdczaYi5JLj82RUTkP
+t2pK5Q1LOvcqMJdY5c8JdJyrrcSjQGMhd7Hd63ht1qSEgtspQwmDxFVL6A70Femy
+wjyN6btqP1Od552xUbLzKjIYAukOiyaynwXgstHB4n7bwnG/ALMlkj1xKiaq9Ugd
+TRf6buMNkOBLsvT0VaT5XIRBzmbQC+C3trvDElv3Rp6wAyXSU7V04IB7aky/VixT
+Ib7G2wIbF80e4rMVwFDU7fopmJbnSaF94MeErIfh4duUo11lI2A=
+=XPo5
 -----END PGP SIGNATURE-----
