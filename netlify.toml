@@ -1,0 +1,10 @@
+# 夕雾缀理 - 幸せのリボン
+[[redirects]]
+from = "/ribbon"
+status = 302
+to = "https://www.bilibili.com/video/av114618534004449/"
+
+[[redirects]]
+from = "/*"
+status = 200
+to = "/index.html"
