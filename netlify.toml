@@ -5,6 +5,11 @@ status = 302
 to = "https://www.bilibili.com/video/av114618534004449/"
 
 [[redirects]]
+from = "/askme"
+status = 302
+to = "https://github.com/outloudvi/askme"
+
+[[redirects]]
 from = "/*"
 status = 200
 to = "/index.html"
