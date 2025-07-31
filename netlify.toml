@@ -14,7 +14,7 @@ from = "/*"
 status = 200
 to = "/index.html"
 
-[headers]
+[[headers]]
 for = "/*"
 [headers.values]
 Permissions-Policy = "geolocation=(), camera=(), microphone=(), interest-cohort=()"
