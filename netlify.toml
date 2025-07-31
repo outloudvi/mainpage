@@ -13,3 +13,10 @@ to = "https://github.com/outloudvi/askme"
 from = "/*"
 status = 200
 to = "/index.html"
+
+[headers]
+for = "/*"
+[headers.values]
+Permissions-Policy = "geolocation=(), camera=(), microphone=(), interest-cohort=()"
+X-Content-Type-Options = "nosniff"
+X-Frame-Options = "DENY"
