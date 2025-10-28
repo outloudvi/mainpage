@@ -1,9 +1,17 @@
 {
+	"private": true,
+	"name": "www-outv-im",
+	"version": "2025.0.0",
+	"type": "module",
 	"scripts": {
 		"build": "vite build"
 	},
 	"dependencies": {
 		"vite": "^7.1.12",
 		"vite-plugin-html": "^3.2.2"
+	},
+	"devDependencies": {},
+	"engines": {
+		"node": "22.x"
 	}
 }
