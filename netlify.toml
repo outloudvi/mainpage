@@ -20,3 +20,10 @@ for = "/*"
 Permissions-Policy = "geolocation=(), camera=(), microphone=(), interest-cohort=()"
 X-Content-Type-Options = "nosniff"
 X-Frame-Options = "DENY"
+
+[build.processing]
+skip_processing = true
+
+[build.processing.css]
+bundle = true
+minify = true
