@@ -1,0 +1,120 @@
+/*
+* LittleLink Button Styles
+* https://littlelink.io
+* Free to use under the MIT license
+* http://www.opensource.org/licenses/mit-license.php
+*/
+
+/* Brand Button Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Only include brand-specific button styling here */
+.button,
+button {
+  color: var(--button-text, #000000);
+  background-color: var(--button-background, transparent);
+  border: var(--button-border, none);
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+/* Global Button Hover Effect
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button:hover,
+button:hover {
+  filter: brightness(90%);
+  transform: translateY(-1px);
+}
+
+/* Button Icons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.icon {
+  filter: var(--icon-filter, none);
+}
+
+/* Brand-Specific Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Default */
+.button.button-default {
+  --button-text: #ffffff;
+  --button-background: #2457f5;
+}
+
+.button-blog,
+.button-misskey {
+  --button-text: black;
+  --button-background: white;
+}
+
+.button-blog {
+  --button-border: 1px solid #34d399;
+}
+
+.button-misskey {
+  --button-border: 1px solid #9ad11b;
+}
+
+@media (prefers-color-scheme: dark) {
+  .button-blog,
+  .button-misskey {
+    --button-text: white;
+    --button-background: #ffffff1a;
+  }
+}
+
+/* Bluesky */
+.button-bluesky {
+  --button-text: #ffffff;
+  --button-background: #1185fe;
+}
+
+/* Discord */
+.button-discord {
+  --button-text: #ffffff;
+  --button-background: #5865f2;
+}
+
+/* GitHub */
+.button-github {
+  --button-text: #ffffff;
+  --button-background: #000000;
+  --button-border: 1px solid #ffffff;
+}
+
+/* GitLab */
+.button-gitlab {
+  --button-text: #ffffff;
+  --button-background: #6151b2;
+}
+
+/* Mastodon */
+.button-mastodon {
+  --button-text: #ffffff;
+  --button-background: #17063b;
+  --button-border: 1px solid #ffffff;
+}
+
+/* Matrix */
+.button-matrix {
+  --button-text: #000000;
+  --button-background: #ffffff;
+  --button-border: 1px solid #000000;
+}
+
+/* Steam */
+.button-steam {
+  --button-text: #ffffff;
+  background-image: linear-gradient(90deg, #08bbff, #2b75ff);
+}
+
+/* Steam Alt */
+.button-steam-alt {
+  --button-text: #ffffff;
+  background-image: linear-gradient(90deg, #09172a, #072a57, #0c5085);
+  --button-border: 1px solid #ffffff;
+}
+
+/* Telegram */
+.button-telegram {
+  --button-text: #ffffff;
+  --button-background: #3faee8;
+}

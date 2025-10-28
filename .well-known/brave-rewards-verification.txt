@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: outv.im
+Token: 84621d10aa36a6d65ca80460615e158ebd9a60c21097ee978aeb7f8fc01a8756
