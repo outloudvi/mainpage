@@ -20,7 +20,3 @@ for = "/*"
 Permissions-Policy = "geolocation=(), camera=(), microphone=(), interest-cohort=()"
 X-Content-Type-Options = "nosniff"
 X-Frame-Options = "DENY"
-
-[build]
-command = "npm run build"
-publish = "dist"
