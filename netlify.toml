@@ -3,6 +3,24 @@
 from = "/ribbon"
 status = 302
 to = "https://www.bilibili.com/video/av114618534004449/"
+[redirects.headers]
+X-Robots-Tag = "none"
+
+# somunia / nyankobrq & yaca - twinkle night
+[[redirects]]
+from = "/tw"
+status = 302
+to = "https://www.bilibili.com/video/av61810777/"
+conditions = { Language = ["zh"] }
+[redirects.headers]
+X-Robots-Tag = "none"
+
+[[redirects]]
+from = "/tw"
+status = 302
+to = "https://www.youtube.com/watch?v=uUvthLpSHrQ"
+[redirects.headers]
+X-Robots-Tag = "none"
 
 [[redirects]]
 from = "/askme"
