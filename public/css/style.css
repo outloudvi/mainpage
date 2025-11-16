@@ -248,6 +248,12 @@ button {
   .slug {
     display: none;
   }
+  .button {
+    justify-content: center;
+  }
+  .hidden-short {
+    display: none;
+  }
 }
 
 .button-blog .slug,
