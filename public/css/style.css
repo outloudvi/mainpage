@@ -16,7 +16,7 @@
 .container {
   position: relative;
   width: 100%;
-  max-width: 30rem; /* 600px */
+  max-width: 35rem;
   text-align: center;
   margin: 0 auto;
   padding: 3rem 1.25rem 0 1.25rem;
@@ -89,9 +89,6 @@ h1 {
   overflow-wrap: break-word;
   hyphens: auto; /* Delete this to remove automatic hyphen on line break */
 }
-.container p {
-  margin: 0 0 2rem 0;
-}
 
 /* Base Typography Settings
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -142,7 +139,7 @@ body {
   line-height: 1.6;
 }
 .container p {
-  margin: 0 0 var(--spacing-xl) 0;
+  margin: 0 0 var(--spacing-l) 0;
   font-size: var(--scale-1);
   line-height: 1.6;
 }
@@ -155,7 +152,8 @@ body {
 
 /* Footer */
 footer {
-  margin: var(--spacing-xxl) 0; /* 4rem (64px) top and bottom */
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-s);
   font-size: var(--scale-0);
 }
 
@@ -175,7 +173,8 @@ footer {
     margin-bottom: var(--spacing-m);
   }
   footer {
-    margin: var(--spacing-xl) 0; /* 3rem (48px) top and bottom */
+    margin-top: var(--spacing-l); /* 3rem (48px) top and bottom */
+    margin-bottom: var(--spacing-s);
   }
 }
 
@@ -405,6 +404,12 @@ ul li {
   section {
     margin: var(--spacing-l) 0;
   }
+}
+
+.imas {
+  text-decoration: underline;
+  text-decoration-color: var(--main-color);
+  text-decoration-thickness: 3px;
 }
 
 /* Font Face Definitions
