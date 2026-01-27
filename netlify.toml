@@ -38,3 +38,8 @@ for = "/*"
 Permissions-Policy = "geolocation=(), camera=(), microphone=(), interest-cohort=()"
 X-Content-Type-Options = "nosniff"
 X-Frame-Options = "DENY"
+
+[[headers]]
+for = "/.well-known/nostr.json"
+[headers.values]
+Access-Control-Allow-Origin = "*"
