@@ -40,8 +40,22 @@
     <!-- <link rel="stylesheet" href="css/brands-extended.css"> -->
     <!-- Learn more at https://github.com/sethcottle/littlelink-extended.
          Remove comments if you've added LittleLink Extended dependencies -->
-    <script defer src="https://umami.outv.im/script.js" data-website-id="8ec4dee4-4831-4053-b656-261cb924dc74"></script>
-
+    <script>
+      var _paq = (window._paq = window._paq || [])
+      _paq.push(['trackPageView'])
+      _paq.push(['enableLinkTracking'])
+      ;(function () {
+        const u = 'https://tomo.outv.im/js/'
+        _paq.push(['setTrackerUrl', u])
+        _paq.push(['setSiteId', '5'])
+        var d = document,
+          g = d.createElement('script'),
+          s = d.getElementsByTagName('script')[0]
+        g.async = true
+        g.src = u
+        s.parentNode.insertBefore(g, s)
+      })()
+    </script>
 </head>
 
 <body>
